@@ -1,11 +1,94 @@
 :root {
   --dark-color: #151332;
   --light-color: #fae8eb;
-  --accent-light-color: #f6caca;
-  --accent-dark-color: #cd9fcc;
+  --accent-light-1-color: #f6caca;
+  --accent-light-2-color: #cd9fcc;
+  --accent-dark-1-color: #6770d6;
+  --accent-dark-2-color: #66529e;
 }
 
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.handlee-regular {
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 body{
-    background-color: var(--dark-color);
-    color: var(--light-color);
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dark-bg {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.dark-accent-1-bg {
+  background-color: var(--accent-dark-1-color);
+  color: var(--light-color);
+}
+
+.dark-accent-2-bg {
+  background-color: var(--accent-dark-2-color);
+  color: var(--light-color);
+}
+
+.light-bg {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.dark-bg-hover {
+  --tw-ease: var(--ease-out);
+  --tw-duration: 300ms;
+  transition-timing-function: var(--ease-out);
+  transition-duration: 300ms;
+  transition-property: background-color, color;
+}
+
+.dark-bg-hover:hover {
+  background-color: var(--accent-dark-1-color);
+  /* color: var(--dark-color); */
+}
+
+.color-accent-1 {
+  color: var(--accent-light-1-color);
+}
+.color-accent-2 {
+  color: var(--accent-light-2-color);
+}
+.color-accent-3 {
+  color: var(--accent-dark-1-color);
+}
+.color-accent-4 {
+  color: var(--accent-dark-2-color);
 }
