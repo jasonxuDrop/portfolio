@@ -7,10 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-100: oklch(93.2% 0.032 255.585);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
-    --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-3xl: 48rem;
@@ -28,6 +24,7 @@
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -190,20 +187,8 @@
   .relative {
     position: relative;
   }
-  .-top-20 {
-    top: calc(var(--spacing) * -20);
-  }
-  .-top-40 {
-    top: calc(var(--spacing) * -40);
-  }
-  .-top-\[36\] {
-    top: calc(36 * -1);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
-  }
-  .top-\[-55px\] {
-    top: -55px;
   }
   .top-\[-85px\] {
     top: -85px;
@@ -214,14 +199,8 @@
   .top-\[-120px\] {
     top: -120px;
   }
-  .top-\[-140px\] {
-    top: -140px;
-  }
   .top-\[60px\] {
     top: 60px;
-  }
-  .top-\[140px\] {
-    top: 140px;
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
@@ -232,26 +211,11 @@
   .right-\[5px\] {
     right: 5px;
   }
-  .right-\[20px\] {
-    right: 20px;
-  }
-  .right-\[70px\] {
-    right: 70px;
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .left-20 {
-    left: calc(var(--spacing) * 20);
-  }
-  .left-\[-70px\] {
-    left: -70px;
-  }
   .left-\[-80px\] {
     left: -80px;
-  }
-  .left-\[17\] {
-    left: 17;
   }
   .left-\[70px\] {
     left: 70px;
@@ -352,9 +316,6 @@
   .origin-bottom-left {
     transform-origin: bottom left;
   }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
   .resize {
     resize: both;
   }
@@ -420,6 +381,9 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -535,11 +499,6 @@
       }
     }
   }
-  .md\:relative {
-    @media (width >= 48rem) {
-      position: relative;
-    }
-  }
   .md\:col-span-2 {
     @media (width >= 48rem) {
       grid-column: span 2 / span 2;
@@ -580,11 +539,6 @@
       display: block;
     }
   }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
   .md\:max-w-full {
     @media (width >= 48rem) {
       max-width: 100%;
@@ -611,26 +565,6 @@
     }
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -656,11 +590,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
