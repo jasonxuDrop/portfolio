@@ -6,7 +6,7 @@ https://chatgpt.com/c/66e1f14a-7290-8011-ae7a-cd3f36e12e22
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 # When ready, optimize images
-npx imagemin src/images/* --out-dir=dist/images
+npx imagemin "src/images/**/*" --out-dir=dist/images
 
 # Then copy HTML to dist/ if needed
 cp src/*.html dist/
