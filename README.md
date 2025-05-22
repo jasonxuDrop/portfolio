@@ -1,4 +1,7 @@
 # portfolio
 
 
-live site: https://jasonxudrop.github.io/portfolio/
+
+live site: https://jasonxdev.com
+
+backup: http://jasonxudrop.github.io/portfolio
