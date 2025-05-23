@@ -22,7 +22,7 @@ npm run dev
 npm run watch:tailwind
 ```
 
-### Minify images in `./images` and copy to `./docs`
+### Minify images in `./images` and output to `./docs`
 
 ```sh
 npm run imagemin
