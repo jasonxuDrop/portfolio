@@ -1,10 +1,13 @@
 :root {
-  --dark-color: #151332;
-  --light-color: #fae8eb;
+  --dark-color: #1e202c;
+  --light-color: #d5d5e0;
   --accent-light-1-color: #f6caca;
   --accent-light-2-color: #cd9fcc;
   --accent-dark-1-color: #6770d6;
   --accent-dark-2-color: #66529e;
+  --accent-new: #60519b;
+  --accent-new-2: #e28463;
+  --dark-variation: #464755;
 }
 
 .lato-regular {
@@ -55,7 +58,7 @@ body{
 }
 
 .dark-accent-1-bg {
-  background-color: var(--accent-dark-1-color);
+  background-color: var(--dark-variation);
   color: var(--light-color);
 }
 
@@ -88,7 +91,7 @@ body{
 }
 
 .dark-bg-hover:hover {
-  background-color: var(--accent-dark-1-color);
+  background-color: var(--accent-new);
 }
 
 .light-bg-hover {
@@ -114,6 +117,13 @@ body{
 }
 .color-accent-4 {
   color: var(--accent-dark-2-color);
+}
+
+.color-accent-new {
+  color: var(--accent-new);
+}
+.color-accent-new-2 {
+  color: var(--accent-new-2);
 }
 
 
