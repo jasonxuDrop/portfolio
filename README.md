@@ -7,7 +7,7 @@ Live site: https://jasonxdev.com
 ### Install dependencies
 
 ```sh
-npm run install
+npm install
 ```
 
 ### Run web server locally
