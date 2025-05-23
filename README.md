@@ -2,14 +2,28 @@
 
 Live site: https://jasonxdev.com
 
-## Install dependencies
+## Getting started
+
+### Install dependencies
 
 ```sh
 npm run install
 ```
 
-## Usage
+### Run local web server
 
-- Build CSS with tailwind: `npm run build:tailwind`
-- Watch and rebuild CSS with tailwind: `npm run watch:tailwind`
-- Minify images with `imagemin`: `npm run imagemin`
+```sh
+npm run dev
+```
+
+### Watch and rebuild CSS
+
+```sh
+npm run watch:tailwind
+```
+
+### Minify images in `./images` and copy to `./docs`
+
+```sh
+npm run imagemin
+```
