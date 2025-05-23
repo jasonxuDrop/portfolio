@@ -189,6 +189,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-\[-40px\] {
+    top: -40px;
+  }
   .top-\[-85px\] {
     top: -85px;
   }
@@ -203,6 +206,9 @@
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
+  }
+  .right-\[-40px\] {
+    right: -40px;
   }
   .right-\[-220px\] {
     right: -220px;
@@ -499,6 +505,16 @@
       @media (hover: hover) {
         background-color: #cd9fcc;
       }
+    }
+  }
+  .md\:top-\[-100px\] {
+    @media (width >= 48rem) {
+      top: -100px;
+    }
+  }
+  .md\:right-\[-220px\] {
+    @media (width >= 48rem) {
+      right: -220px;
     }
   }
   .md\:col-span-2 {
