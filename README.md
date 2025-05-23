@@ -10,7 +10,7 @@ Live site: https://jasonxdev.com
 npm run install
 ```
 
-### Run local web server
+### Run web server locally
 
 ```sh
 npm run dev
