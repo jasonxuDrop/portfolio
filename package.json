@@ -1,12 +1,13 @@
 {
-  "name": "portfolio-2025",
+  "name": "jasonxdev.com",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:tailwind": "tailwindcss -i ./tailwind.css -o ./docs/styles.css",
+    "watch:tailwind": "tailwindcss -i ./tailwind.css -o ./docs/styles.css --watch",
+    "imagemin": "./imagemin.sh"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jason Xu",
   "license": "ISC",
   "description": "",
   "devDependencies": {
