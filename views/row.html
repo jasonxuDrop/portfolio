@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- CONTENT -->
+
+<!-- TODO replace image and alt text -->
+<img src="/images/home/project-thumbnail-row.jpg" 
+alt="project thumbnail of Modular Combat State Machine"
+class="col-span-12 rounded-2xl">
+
+<div class="col-span-full 
+flex flex-col items-stretch justify-center gap-4
+w-full max-w-3xl mx-auto">
+
+    <!-- TODO add content here -->
+
+    <h1 class="text-4xl font-bold mt-8 mb-4">Row</h1>
+
+    <div class="relative w-full h-0 pb-[56.25%]
+    overflow-hidden rounded-2xl">
+        <iframe width="1216" height="684" src="https://www.youtube-nocookie.com/embed/s9MCR3MIZDs" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="absolute w-full h-full top-0 left-0"></iframe>
+    </div>
+
+    <p>The ocean is not big enough for two captains. Outlast the other player by throwing fishes to sink their boats or smack them with your oar. </p>
+
+    <p>Made for a 48-hour game-jam (Global Game Jam 2024). As the main programmer I coded the 2D physics, player control, game state logic. Game Jam version available on itch.io, linked below.</p>
+
+    <div class="flex flex-row gap-x-8 gap-y-4 justify-center flex-wrap">
+
+        <a href="https://tinygodzilla.itch.io/row" 
+        target="_blank" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <img src="/images/icons/itchdotio.svg" alt="Itch.io" class="w-8 h-8">
+            <p>Play the game</p>
+        </a>
+
+        <a href="https://github.com/imnorookie/GlobalGameJam24" 
+        target="_blank" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <img src="/images/icons/github.svg" alt="GitHub" class="w-8 h-8">
+            <p>GitHub</p>
+        </a>
+
+    </div>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">Features</h2>
+
+    <h3 class="text-2xl">2D physics</h3>
+
+    <p>We wanted this game to have some silly physics: a barely floating boat, a oar that is too heavy to swing sometime, and some silly looking fishes. Most of the physics were using unity's 2D physics, but also some custom modification. </p>
+
+    <p>The oar moving the boat was the part that went through the most tweak, the custom calculation translate the oar's movement to a force which moves the boat in a way that looks natural. </p>
+
+    <p>The oar was done as a joint rigidbody to the player. This also went through various tweaks. We wanted it to be a double edge sword, when it is extended it moves the boat faster and has better reach, but also it shifts the player's center of mass so much that a big moves make it looks like the player is going to fall over. </p>
+
+    <p>The player is also an joint rigidbody connected to the boat. I had to do some hacks to make the player try to stay upright while still looking like a physics object. </p>
+
+
+
+    <div class="h-8"></div>
+
+    <h3 class="text-2xl">Fish AI</h3>
+
+    <div class="relative w-full h-0 pb-[56.25%]
+    overflow-hidden rounded-2xl">
+        <iframe width="1216" height="684" src="https://www.youtube-nocookie.com/embed/w4Gp_03ebRw" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="absolute w-full h-full top-0 left-0"></iframe>
+    </div>
+
+    <p>The fish swims across the ocean from one side to the other. But it can be thrown around, out of the water, and sometimes off the map to Narnia. Made a simple way AI that goes to specific waypoints, so that even if its AI is interrupted by the player it can still resume afterwards.</p>
+
+    <p>Also made object pools for the fishes. Memory management is always good practice no matter the scope 👍</p>
+
+    <p>The wiggle animation is done with a simple 3D animation by me. (#TechArt)</p>
+
+
+
+    <div class="h-8"></div>
+
+    <h3 class="text-2xl">Enemy AI</h3>
+
+    <p>I made the character controller that it can take either player 1 input, player 2 input or from an AI. We didn't have time to make it too complex so I made it to row left for a long random duration, then row right for a shorter random duration. </p>
+
+    <p>But as it turned out, that was enough to defeat 80% of the players who tried the game… We got complains that the AI was too hard… Sometime I'm scared by my own creations…</p>
+
+
+
+    <div class="h-8"></div>
+
+    <h3 class="text-2xl">Game State Logic</h3>
+
+    <p>The win lose conditions. I wrote all that, not much more to say.</p>
+
+
+
+    <div class="h-8"></div>
+
+    <div class="flex flex-row gap-x-8 gap-y-4 justify-center flex-wrap">
+        
+        <a href="/#projects" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <p>Back to all projects</p>
+        </a>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}
