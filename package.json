@@ -1,12 +1,11 @@
 {
   "name": "portfolio-2025",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nunjucks": "node render.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jason Xu",
   "license": "ISC",
   "description": "",
   "devDependencies": {
@@ -15,6 +14,7 @@
     "imagemin-cli": "^8.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
+    "nunjucks": "^3.2.4",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.7"
   },

@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- CONTENT -->
+
+<!-- TODO replace image and alt text -->
+<img src="/images/home/project-thumbnail-fsm.jpg" 
+alt="project thumbnail of Modular Combat State Machine"
+class="col-span-12 rounded-2xl">
+
+<div class="col-span-full 
+flex flex-col items-stretch justify-center gap-4
+w-full max-w-3xl mx-auto">
+
+    <!-- TODO add content here -->
+
+    <h1 class="text-4xl font-bold mt-8 mb-4">Modular Combat State Machine</h1>
+
+    <p>This state machine system provide a general template for game elements with state based behaviors like characters, enemies, and UI. Providing a highly extendable system for many use cases, while providing debug tools to enhance editor workflow. </p>
+
+    <div class="flex flex-row gap-x-8 gap-y-4 justify-center flex-wrap">
+
+        <a href="https://jasonxxr.itch.io/modular-combat-fsm-demo" target="_blank" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <img src="/images/icons/itchdotio.svg" alt="Itch.io" class="w-8 h-8">
+            <p>Play the demo</p>
+        </a>
+
+        <a href="https://github.com/jasonxuDrop/Modular-Combat-FSM" 
+        target="_blank" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <img src="/images/icons/github.svg" alt="GitHub" class="w-8 h-8">
+            <p>GitHub</p>
+        </a>
+
+    </div>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">Demo Video</h2>
+
+    <div class="relative w-full h-0 pb-[56.25%]
+    overflow-hidden rounded-2xl">
+        <iframe width="1216" height="684" src="https://www.youtube-nocookie.com/embed/ic8AlUNyBHA" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="absolute w-full h-full top-0 left-0"></iframe>
+    </div>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">Technical Documentation</h2>
+
+    <h3 class="text-2xl">Key principles</h3>
+
+    <ul class="list-disc pl-5">
+        <li class="mb-2">
+            <span class="font-bold">Versatile:</span>
+            The open-ended design makes this state machine suitable for many use cases, including UI and level logic.
+        </li>
+        <li class="mb-2">
+            <span class="font-bold">Modular:</span>
+            Actions and transitions are built from simple, reusable components—similar to how complex predicates can be formed by combining basic conditions.
+        </li>
+        <li>
+            <span class="font-bold">Decoupled:</span>
+            Uses event-based communication. The Unity GUI debugger reads from events without directly accessing the state machine, keeping the state machine independent from external tools.
+        </li>
+    </ul>
+
+    <div class="flex flex-row gap-x-8 gap-y-4 justify-center flex-wrap">
+
+        <a href="https://kuma-alchemy.notion.site/Modular-Combat-FSM-1efbf26ea72b80a48567c88013d24021?pvs=74" 
+        target="_blank" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <img src="/images/icons/notion.svg" alt="Notion" class="w-8 h-8">
+            <p>Read Full Doc On Notion</p>
+        </a>
+
+    </div>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">Editor Tools</h2>
+
+    <h3 class="text-2xl">State Machine Debug Demo</h3>
+
+    <img src="/images/project-fsm/fsm-debug-gui.jpg" alt="screen shot of the FSM debug GUI" class="rounded-2xl">
+
+    <p>In the demo video above, the state machine debug panel on the left can be used to visualize the state machine status. The timeline view shows the timeline progress and time marker for applicable states. Making it easier to catch time related bugs.</p>
+
+    <div></div>
+    
+    <h3 class="text-2xl">Custom Inspector</h3>
+
+    <div class="grid grid-cols-1 gap-4 justify-items-center md:grid-cols-2">
+
+        <img src="/images/project-fsm/fsm-time-in-state-1.jpg" 
+             alt="screen shot of the FSM custom inspector for the Time In State Component (1)" 
+             class="rounded-2xl">
+
+        <img src="/images/project-fsm/fsm-time-in-state-2.jpg" 
+             alt="screen shot of the FSM custom inspector for the Time In State Component (2)" 
+             class="rounded-2xl">
+
+    </div>
+
+    <P>State Action Time In State is a concrete state action component which tracks how long has passed in the current state. The time stamps are used by a predicates for decisions for various decision. Since many decision shares the same time stamp, they are stored in a dictionary so editing the time will keep the reference. </P>
+
+    <P>The top section is drawn with a custom inspector script. This shows the timing between the time stamps in a more intuitive way, making editing easier. </P>
+
+    <div></div>
+
+    <div class="grid grid-cols-1 gap-4 justify-items-center md:grid-cols-2">
+
+        <img src="/images/project-fsm/fsm-time-in-state-range-1.jpg" 
+             alt="screen shot of the FSM custom inspector for the Time In State Range Predicate (1)" 
+             class="rounded-2xl">
+
+        <img src="/images/project-fsm/fsm-time-in-state-range-2.jpg" 
+             alt="screen shot of the FSM custom inspector for the Time In State Range Predicate (2)" 
+             class="rounded-2xl">
+
+    </div>
+
+    <p>This is a predicate which checks if time in state is in a specific range. A selector is used to quickly select the available tags.</p>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">Extensibility</h2>
+
+    <h3 class="text-2xl">Adding a new state in 1 hour</h3>
+
+    <div class="relative w-full h-0 pb-[56.25%]
+    overflow-hidden rounded-2xl">
+        <iframe width="1216" height="684" src="https://www.youtube-nocookie.com/embed/wT1CkGNmfhw" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="absolute w-full h-full top-0 left-0"></iframe>
+    </div>
+
+    <p>The video shows the unedited full process of adding a new state - the ultimate attack. It goes through things like creating state, adding transition to the state, resource management, and basic animation. </p>
+
+
+
+    <div class="h-8"></div>
+
+    <h2 class="text-3xl">About this demo</h2>
+
+    <img src="/images/project-fsm/fsm-state-graph.jpg" alt="state graph of the FSM made for this demo." class="rounded-2xl">
+
+    <p>Been playing a lot of Zenless Zone Zero as of late. I wanted to remake the character, Anby, with this project. While interactions like parry, dodge counter, and quick assist are missing, this was enough for now to demonstrate a modular and extendable state machine. </p>
+
+
+
+    <div class="h-8"></div>
+
+    <div class="flex flex-row gap-x-8 gap-y-4 justify-center flex-wrap">
+        
+        <a href="/#projects" 
+        class="text-center text-2xl font-bold py-3 px-12
+        flex flex-row gap-3 items-center
+        light-accent-2-bg light-bg-hover rounded-2xl">
+            <p>Back to all projects</p>
+        </a>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

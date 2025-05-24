@@ -1,7 +1,19 @@
 # portfolio
 
+Live site: https://jasonxdev.com
 
+Backup: http://jasonxudrop.github.io/portfolio
 
-live site: https://jasonxdev.com
+## Getting started
 
-backup: http://jasonxudrop.github.io/portfolio
+### Install dependencies
+
+```sh
+npm install
+```
+
+### Render HTML templates
+
+```sh
+npm run nunjucks
+```
