@@ -195,9 +195,6 @@
   .top-\[-85px\] {
     top: -85px;
   }
-  .top-\[-100px\] {
-    top: -100px;
-  }
   .top-\[-120px\] {
     top: -120px;
   }
@@ -209,9 +206,6 @@
   }
   .right-\[-40px\] {
     right: -40px;
-  }
-  .right-\[-220px\] {
-    right: -220px;
   }
   .right-\[5px\] {
     right: 5px;
@@ -500,11 +494,9 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
-  .hover\:bg-\[\#cd9fcc\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #cd9fcc;
-      }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
     }
   }
   .md\:top-\[-100px\] {
